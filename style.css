@@ -33,3 +33,30 @@ header {
   .city i {
     font-size: 1.5rem;
   }
+
+  /* Explore */
+.explore {
+    text-align: center;
+  }
+  .explore h2 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+  .explore p {
+    font-size: 1rem;
+  }
+  .explore button {
+    color:white;
+    font-weight: 300;
+    font-size: 1.2rem;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    box-shadow: 2px 1px 7px -3px #000000;
+    background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+    transition: 200ms;
+  }
+  .explore button:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
