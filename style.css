@@ -11,6 +11,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+main {
+  padding: 0 1rem;
+}
+
 header {
   font-family: "shrikhand", cursive;
   text-align: center;
@@ -28,25 +32,20 @@ header {
   gap: 1rem;
   padding: 0.5rem;
 }
-
 .city i {
   font-size: 1.5rem;
 }
 
-/* Explore */
 .explore {
   text-align: center;
 }
-
 .explore h2 {
   margin-top: 2rem;
   font-size: 1.5rem;
 }
-
 .explore p {
   font-size: 1rem;
 }
-
 .explore button {
   color: white;
   font-weight: 300;
@@ -54,14 +53,57 @@ header {
   border: none;
   padding: 1rem 2rem;
   border-radius: 2rem;
-  box-shadow: 2px 1px 7px -3px #000000;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   transition: 200ms;
+  box-shadow: 2px 1px 7px -3px #000000;
 }
-
 .explore button:hover {
   transform: scale(1.02);
   opacity: 0.9;
+}
+
+.list {
+  counter-reset: steps;
+}
+.list ol {
+  display: flex;
+  gap: 2rem;
+}
+@media (max-width: 1000px) {
+  .list ol {
+    flex-direction: column;
+  }
+}
+.list li {
+  position: relative;
+  list-style-type: none;
+  background-color: #f6f6f6;
+  padding: 1.3rem 2rem;
+  flex-grow: 1;
+  border-radius: 1rem;
+  box-shadow: 2px 1px 7px -3px #000000;
+}
+.list li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  color: white;
+  background-color: #9356dc;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 1rem;
+  left: -1rem;
+}
+.list li:hover {
+  transform: scale(1.02);
+}
+.list li i.fas {
+  margin-right: 1rem;
+  color: #7e7e7e;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
