@@ -20,6 +20,15 @@ h2 {
   margin: 0;
 }
 
+h3, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 header {
   font-family: "shrikhand", cursive;
   text-align: center;
@@ -59,6 +68,7 @@ header {
   border-radius: 2rem;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   transition: 200ms;
+  margin-top: 1rem;
   box-shadow: 2px 1px 7px -3px #000000;
 }
 .explore button:hover {
@@ -114,6 +124,7 @@ header {
 
 .menus {
   background-color: #f6f6f6;
+  margin-bottom: 2rem;
 }
 .menus .menus__cards {
   display: grid;
@@ -125,23 +136,41 @@ header {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+.menus .menus__cards .new {
+  position: relative;
+}
+.menus .menus__cards .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99e2d0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  top: 1rem;
+  right: 1rem;
+}
 .menus .cards__image {
-  background-image: url("./assets/menu-1.jpg");
-  background-size: cover;
+  object-fit: cover;
   height: 15rem;
-  border-radius: 1rem;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
 }
-.menus .cards__image-1 {
-  background-image: url("../../assets/menu-1.jpg");
+.menus .cards__description {
+  position: relative;
 }
-.menus .cards__image-2 {
-  background-image: url("../../assets/menu-2.jpg");
+.menus .cards__description h3, .menus .cards__description p {
+  margin: 0.5rem;
 }
-.menus .cards__image-3 {
-  background-image: url("../../assets/menu-3.jpg");
+.menus .cards__description h3 {
+  padding-top: 0.5rem;
 }
-.menus .cards__image-4 {
-  background-image: url("../../assets/menu-4.jpg");
+.menus .cards__description i {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /*# sourceMappingURL=style.css.map */
