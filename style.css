@@ -14,6 +14,11 @@ body {
 main {
   padding: 0 7rem;
 }
+@media (max-width: 1000px) {
+  main {
+    padding: 0 1rem;
+  }
+}
 
 h2 {
   padding: 2rem 0;
@@ -66,10 +71,10 @@ header {
   border: none;
   padding: 1rem 2rem;
   border-radius: 2rem;
-  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   transition: 200ms;
   margin-top: 1rem;
   box-shadow: 2px 1px 7px -3px #000000;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
 }
 .explore button:hover {
   transform: scale(1.02);
@@ -118,7 +123,7 @@ header {
 }
 .list li i.fas {
   margin-right: 1rem;
-  color: #7e7e7e;
+  color: black;
   font-size: 1.5rem;
 }
 
@@ -159,18 +164,47 @@ header {
 }
 .menus .cards__description {
   position: relative;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
 }
-.menus .cards__description h3, .menus .cards__description p {
-  margin: 0.5rem;
-}
-.menus .cards__description h3 {
-  padding-top: 0.5rem;
+.menus .cards__description h3,
+.menus .cards__description p {
+  padding-top: 0.3rem;
 }
 .menus .cards__description i {
   position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
+}
+.menus .cards__description .fas {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+}
+.menus .cards__description:hover .fas {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+
+footer {
+  background-color: #353535;
+  padding: 1rem 2rem;
+  color: white;
+}
+footer h2 {
+  font-family: "shrikhand", "sans-serif";
+  font-weight: 500;
+  padding: 1rem 0;
+}
+footer p {
+  padding: 0.2rem;
+}
+footer i {
+  margin: 0.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

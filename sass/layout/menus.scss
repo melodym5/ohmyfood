@@ -1,5 +1,7 @@
 @use "../utils/variables";
 @use "../utils/colors.scss";
+@use "../utils/mixins.scss";
+
 .menus {
     background-color: #f6f6f6;
     margin-bottom: 2rem;
@@ -36,17 +38,30 @@
         }
         &__description {
             position: relative;
-            h3,p {
-            margin: 0.5rem;
-            }
-            h3 {
-                padding-top: 0.5rem;
+            background-color: white;
+            border-radius: 0 0 1rem 1rem;
+           
+            h3,
+            p {
+                padding-top: 0.3rem;
             }
             i {
                 position: absolute;
                 right: 1rem;
                 top: 50%;
                 transform: translateY(-50%);
+            }
+            .fas {
+                color: transparent;
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 0;
+                transition: all 200ms ease-in-out;
+                @include mixins.gradient(1);
+            }
+            &:hover .fas {
+                opacity: 1;
+                transform: translateY(-50%) scale(1.2);
             }
         }
     }
