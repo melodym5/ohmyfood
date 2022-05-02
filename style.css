@@ -12,7 +12,12 @@ body {
 }
 
 main {
-  padding: 0 1rem;
+  padding: 0 7rem;
+}
+
+h2 {
+  padding: 2rem 0;
+  margin: 0;
 }
 
 header {
@@ -40,7 +45,6 @@ header {
   text-align: center;
 }
 .explore h2 {
-  margin-top: 2rem;
   font-size: 1.5rem;
 }
 .explore p {
@@ -64,6 +68,7 @@ header {
 
 .list {
   counter-reset: steps;
+  margin-bottom: 2rem;
 }
 .list ol {
   display: flex;
@@ -94,8 +99,9 @@ header {
   place-items: center;
   border-radius: 50%;
   position: absolute;
-  bottom: 1rem;
+  bottom: 50%;
   left: -1rem;
+  transform: translateY(50%);
 }
 .list li:hover {
   transform: scale(1.02);
@@ -104,6 +110,38 @@ header {
   margin-right: 1rem;
   color: #7e7e7e;
   font-size: 1.5rem;
+}
+
+.menus {
+  background-color: #f6f6f6;
+}
+.menus .menus__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 1000px) {
+  .menus .menus__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.menus .cards__image {
+  background-image: url("./assets/menu-1.jpg");
+  background-size: cover;
+  height: 15rem;
+  border-radius: 1rem;
+}
+.menus .cards__image-1 {
+  background-image: url("../../assets/menu-1.jpg");
+}
+.menus .cards__image-2 {
+  background-image: url("../../assets/menu-2.jpg");
+}
+.menus .cards__image-3 {
+  background-image: url("../../assets/menu-3.jpg");
+}
+.menus .cards__image-4 {
+  background-image: url("../../assets/menu-4.jpg");
 }
 
 /*# sourceMappingURL=style.css.map */
