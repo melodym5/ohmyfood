@@ -1,12 +1,32 @@
+@use "./colors.scss";
+
 @mixin gradient($opacity: 0.9){
     background-image: linear-gradient(to top, rgba(147, 86, 220, $opacity),
      rgba(255, 121, 218, $opacity));
 }
 
-@mixin base-shadow {
-    box-shadow: 2px 1px 7px -3px #000000;
+@mixin box-shadow {
+    box-shadow: 2px 1px 7px -3px colors.$light-grey;
 }
 
 @mixin zoom {
     transform: scale(1.02);
+}
+
+@mixin base-button {
+    color:white;
+    font-weight: 300;
+    font-size: 1.2rem;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    transition: 200ms;
+    margin-top: 1rem;
+    cursor: pointer;
+    @include box-shadow;
+    @include gradient(0.9);
+    &:hover {
+        transform: scale(1.02);
+        opacity: 0.9;
+      }
 }

@@ -4,4 +4,9 @@
 @use "./sass/layout/explore";
 @use "./sass/layout/list";
 @use "./sass/layout/menus";
-@use "./sass/layout/footer.scss";
+@use "./sass/layout/footer";
+@use "./sass/pages/restaurants";
+
+.img-resto-1 {
+  max-width: 100%;
+}
