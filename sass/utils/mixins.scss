@@ -1,4 +1,6 @@
 @use "./colors.scss";
+@use "./variables.scss";
+@use "./animations.scss";
 
 @mixin gradient($opacity: 0.9){
     background-image: linear-gradient(to top, rgba(147, 86, 220, $opacity),
@@ -9,13 +11,22 @@
     box-shadow: 2px 1px 7px -3px colors.$light-grey;
 }
 
-@mixin zoom {
-    transform: scale(1.02);
+@mixin zoom($zoom-level:1.02) {
+    transform: scale($zoom-level); 
 }
-
+@mixin font-awesome ($font-weight: 400) {
+    display: inline-block;
+    position: absolute;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: $font-weight;
+}
 @mixin base-button {
     color:white;
-    font-weight: 300;
+    font-weight: 900;
     font-size: 1.2rem;
     border: none;
     padding: 1rem 2rem;

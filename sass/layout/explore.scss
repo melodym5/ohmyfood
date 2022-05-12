@@ -1,14 +1,63 @@
 @use "../utils/mixins.scss";
+@use "../utils/colors.scss";
   
   .explore {
+    background-color: darken(colors.$lighter-grey,1%);
     text-align: center;
+    padding: 2rem;
+    margin: 0;
   & h2 {
     font-size: 1.5rem;
+    margin: 1rem;
   }
   & p {
     font-size: 1rem;
   }
   & button {
     @include mixins.base-button;
+    font-size: 1rem;
+  }
+}
+
+.loader {
+  $animation-duration: 1s;
+  $animation-count:2;
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: #ffffff;
+  opacity: 0.9;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  animation: disappear 200ms $animation-duration * $animation-count forwards;
+  transform-origin: top;
+  &::after {
+    content: "";
+    height: 100px;
+    width: 100px;
+    border-top: 10px solid colors.$purple;
+    border-right: 10px solid transparent;
+    border-radius: 50%;
+    animation: spin $animation-duration ease-in-out;
+    animation-iteration-count: $animation-count;
+  }
+}
+
+@keyframes disappear {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }

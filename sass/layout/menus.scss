@@ -4,12 +4,12 @@
 
 .menus {
     background-color: #f6f6f6;
-    margin-bottom: 2rem;
+    padding: 1rem;
    
 .menus__cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        gap: 1rem;
         @media (max-width: variables.$breakpoint) {
          grid-template-columns: repeat(1, 1fr);
         }
@@ -22,16 +22,19 @@
             height: 2rem;
             width: 5rem;
             background-color: colors.$color-tertiary;
-            color: darken(colors.$color-tertiary, $amount: 50%);
+            color: darken(colors.$color-tertiary, $amount: 40%);
             display: grid;
             place-items: center;
-            top: 1rem;
-            right: 1rem;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
         }
     }
     .cards {
         &__image {   
         object-fit: cover;
+        object-position: center;
         height: 15rem;
         width: 100%;
         border-radius: 1rem 1rem 0 0;
@@ -41,9 +44,11 @@
             background-color: white;
             border-radius: 0 0 1rem 1rem;
            
-            h3,
+            h3 {
+                padding: 0.5rem 0 0 0.5rem;
+            }
             p {
-                padding-top: 0.3rem;
+                padding: 0 0 0.5rem 0.5rem;
             }
             i {
                 position: absolute;

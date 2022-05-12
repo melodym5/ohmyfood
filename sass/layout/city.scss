@@ -1,12 +1,17 @@
+@use "../utils/colors.scss";
+
 .city {
     display: flex;
-    background-color: #f3f3f3;
+    background-color: lighten(colors.$light-grey,40%);
     align-items: center;
     justify-content: center;
     text-align: center;
     gap: 1rem;
-    padding: 0.5rem;
+    padding: 1rem;
     & i {
       font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 1rem;
     }
   }
