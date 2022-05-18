@@ -381,6 +381,9 @@ footer i {
 .menu .menus__category .menu-items:nth-child(4) {
   animation-delay: 400ms;
 }
+.menu .menus__category .menu-items:nth-child(5) {
+  animation-delay: 500ms;
+}
 .menu .menus__category .menu-items .menu-items__description {
   padding: 1rem;
   overflow: hidden;
