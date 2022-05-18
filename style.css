@@ -111,10 +111,10 @@ header {
 }
 .loader::after {
   content: "";
-  height: 100px;
-  width: 100px;
-  border-top: 10px solid #9356dc;
-  border-right: 10px solid transparent;
+  height: 80px;
+  width: 80px;
+  border-top: 7px solid #9356dc;
+  border-right: 7px solid transparent;
   border-radius: 50%;
   animation: spin 1s ease-in-out;
   animation-iteration-count: 2;
@@ -184,7 +184,6 @@ header {
 .list li i.fas {
   margin-right: 1rem;
   color: #7e7e7e;
-  font-size: 1.5rem;
 }
 
 .menus {
@@ -269,7 +268,7 @@ footer p {
   padding: 0.2rem;
 }
 footer i {
-  margin: 0.2rem;
+  margin-right: 0.5rem;
 }
 
 #back header:hover::before {
@@ -294,7 +293,7 @@ footer i {
 .banner {
   display: block;
   width: 100%;
-  height: 70vh;
+  height: 50vh;
   object-fit: cover;
   object-position: center;
 }
@@ -368,7 +367,7 @@ footer i {
   display: flex;
   border-radius: 1rem;
   overflow: hidden;
-  margin: 0.5rem;
+  margin: 1rem;
   box-shadow: 2px 1px 7px -3px #7e7e7e;
   animation: appear 1s;
   animation-fill-mode: both;
@@ -457,10 +456,6 @@ footer i {
 .order button:hover {
   transform: scale(1.02);
   opacity: 0.9;
-}
-
-.img-resto-1 {
-  max-width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

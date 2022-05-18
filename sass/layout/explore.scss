@@ -37,10 +37,10 @@
   transform-origin: top;
   &::after {
     content: "";
-    height: 100px;
-    width: 100px;
-    border-top: 10px solid colors.$purple;
-    border-right: 10px solid transparent;
+    height: 80px;
+    width: 80px;
+    border-top: 7px solid colors.$purple;
+    border-right: 7px solid transparent;
     border-radius: 50%;
     animation: spin $animation-duration ease-in-out;
     animation-iteration-count: $animation-count;
